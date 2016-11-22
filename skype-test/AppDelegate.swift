@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Initialize audio session
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+        do{
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        }
+        catch let errorForCategory {
+            print(errorForCategory.localizedDescription)
+        }
+        
+        do{
+            try audioSession.setMode(AVAudioSessionModeVideoChat)
+        }
+        catch let errorForMode {
+            print(errorForMode.localizedDescription)
+        }
+        
         return true
     }
 

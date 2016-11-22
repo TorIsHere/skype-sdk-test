@@ -28,10 +28,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-bu-FkE">
                                 <rect key="frame" x="297" y="30" width="52" height="30"/>
                                 <state key="normal" title="EndCall"/>
+                                <connections>
+                                    <action selector="endCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogX-iQ-tUG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRt-ub-Iqu">
                                 <rect key="frame" x="26" y="30" width="35" height="30"/>
                                 <state key="normal" title="Mute"/>
+                                <connections>
+                                    <action selector="toggleMuted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ff7-4D-YRS"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOM-ie-07U">
                                 <rect key="frame" x="206" y="514" width="128" height="128"/>
@@ -56,6 +62,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="AIw-bu-FkE" secondAttribute="trailing" constant="10" id="och-GG-uqx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="endCallButton" destination="AIw-bu-FkE" id="If3-Oe-3n1"/>
+                        <outlet property="muteButton" destination="IRt-ub-Iqu" id="zUI-4k-Ubk"/>
+                        <outlet property="participantVideoView" destination="gsc-3y-ti5" id="29Z-QW-3UJ"/>
+                        <outlet property="selfVideoView" destination="LOM-ie-07U" id="zws-LW-ICi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

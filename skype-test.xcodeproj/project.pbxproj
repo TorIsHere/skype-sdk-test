@@ -16,6 +16,7 @@
 		960647E21DE1892700356C6E /* skype_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960647E11DE1892700356C6E /* skype_testUITests.swift */; };
 		965BD2161DE19F30007E0F66 /* SkypeForBusiness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965BD2141DE19EEE007E0F66 /* SkypeForBusiness.framework */; };
 		965BD2171DE19F30007E0F66 /* SkypeForBusiness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 965BD2141DE19EEE007E0F66 /* SkypeForBusiness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		96779E451DE4ACD700E5F0DC /* SfBConversationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96779E441DE4ACD700E5F0DC /* SfBConversationHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,9 @@
 		960647E11DE1892700356C6E /* skype_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skype_testUITests.swift; sourceTree = "<group>"; };
 		960647E31DE1895400356C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		965BD2141DE19EEE007E0F66 /* SkypeForBusiness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SkypeForBusiness.framework; sourceTree = "<group>"; };
+		96779E421DE4ACD500E5F0DC /* skype-test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "skype-test-Bridging-Header.h"; sourceTree = "<group>"; };
+		96779E431DE4ACD700E5F0DC /* SfBConversationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SfBConversationHelper.h; sourceTree = "<group>"; };
+		96779E441DE4ACD700E5F0DC /* SfBConversationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SfBConversationHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 		960647C01DE1880300356C6E /* skype-test */ = {
 			isa = PBXGroup;
 			children = (
+				96779E431DE4ACD700E5F0DC /* SfBConversationHelper.h */,
+				96779E441DE4ACD700E5F0DC /* SfBConversationHelper.m */,
 				965BD2141DE19EEE007E0F66 /* SkypeForBusiness.framework */,
 				960647C11DE1882700356C6E /* AppDelegate.swift */,
 				960647C31DE1884000356C6E /* ViewController.swift */,
@@ -122,6 +128,7 @@
 				960647C81DE1886800356C6E /* Assets.xcassets */,
 				960647CA1DE1888500356C6E /* LaunchScreen.storyboard */,
 				960647CD1DE188AF00356C6E /* Info.plist */,
+				96779E421DE4ACD500E5F0DC /* skype-test-Bridging-Header.h */,
 			);
 			path = "skype-test";
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 					960647BD1DE187F100356C6E = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = B92W98DN9L;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					960647D11DE188AF00356C6E = {
@@ -284,6 +292,7 @@
 			files = (
 				960647C41DE1884000356C6E /* ViewController.swift in Sources */,
 				960647C21DE1882800356C6E /* AppDelegate.swift in Sources */,
+				96779E451DE4ACD700E5F0DC /* SfBConversationHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B92W98DN9L;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -445,6 +455,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.torishere.skype-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "skype-test/skype-test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -453,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B92W98DN9L;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -463,6 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.torishere.skype-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "skype-test/skype-test-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
